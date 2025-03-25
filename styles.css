@@ -1,0 +1,225 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background: #ff6600;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #000;
+}
+
+/* Hero Section */
+.hero {
+    background: #ff6600;
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.hero-text {
+    width: 50%;
+    color: white;
+    animation: fadeInLeft 1s ease-in-out;
+}
+
+.hero-text h2 {
+    font-size: 36px;
+    animation: fadeInDown 1.2s ease-in-out;
+}
+
+.cta-buttons .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: white;
+    color: #ff6600;
+    margin: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.cta-buttons .btn:hover {
+    background: #000;
+    color: white;
+    transform: scale(1.05);
+}
+
+.hero-image {
+    width: 45%;
+    animation: fadeInRight 1s ease-in-out;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* How It Works */
+.how-it-works {
+    background: #f4f4f4;
+    padding: 50px 0;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.steps {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.step {
+    width: 45%;
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+.step:hover {
+    transform: scale(1.05);
+}
+
+/* Why Choose Us */
+.why-choose-us {
+    padding: 50px 0;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.feature {
+    width: 20%;
+    margin: 10px;
+    transition: transform 0.3s;
+}
+
+.feature:hover {
+    transform: scale(1.1);
+}
+
+/* App Showcase */
+.app-showcase {
+    background: #ff6600;
+    color: white;
+    padding: 50px 0;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Secure Payments */
+.secure-payments {
+    background: #f4f4f4;
+    padding: 50px 0;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Footer */
+footer {
+    background: #ff6600;
+    padding: 30px 0;
+    color: white;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeInLeft {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text, .hero-image {
+        width: 100%;
+    }
+
+    .steps, .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .step, .feature {
+        width: 80%;
+    }
+
+    .cta-buttons .btn {
+        display: block;
+        margin: 10px auto;
+    }
+}
